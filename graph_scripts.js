@@ -1,10 +1,20 @@
 var ctx = document.getElementById('myChart').getContext('2d');
+var myChart;
 pieChart = () => {displayChart('pie')}
 barChart = () => {displayChart('bar')}
 lineChart = () => {displayChart('line')}
+destroyChart = () => {
+
+    var ctx = document.getElementById("myChart").getContext("2d");
+    if (myChart) {
+        myChart.destroy();
+      }
+
+}
 displayChart = (chartType) => {
-    ctx.clear();
-    var myChart = new Chart(ctx, {
+
+
+    myChart = new Chart(ctx, {
         type: chartType,
         data: {
             labels: ['Pleasanton', 'Dublin', 'Livermore'],

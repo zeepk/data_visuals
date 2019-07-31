@@ -1,6 +1,6 @@
 <!doctype html>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
+<link rel="stylesheet" href="style.css">
 
 <html lang="en">
     <head>
@@ -9,17 +9,20 @@
         <title>Graphing Test</title>
         <meta name="description" content="The HTML5 Herald">
         <meta name="author" content="SitePoint">
+        <h1>DataVisuals</h1>
+        <ul>
+            <li><button onclick="pieChart()" value="Pie" id="pie">Pie</button></li>
+            <li><button onclick="barChart()" value="Bar" id="bar">Bar</button></li>
+            <li><button onclick="lineChart()" value="Line" id="line">Line</button></li>
+            <li><button onclick="destroyChart()" value="Destroy" id="destroy">CLEAR</button></li>
+        </ul>
         
     </head>
     <body>
 
-            <input type="button" onclick="pieChart()" value="Pie" id="pie">
-            <input type="button" onclick="barChart()" value="Bar" id="bar">
-            <input type="button" onclick="lineChart()" value="Line" id="line">
 
 
-        <canvas id="myChart"></canvas>
-    </body>
+            <canvas id="myChart" width="400" height="200"></canvas>    </body>
     </html>
     
 
